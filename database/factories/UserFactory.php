@@ -34,9 +34,37 @@ class UserFactory extends Factory
     }
 
     /**
+     * Indicate that the model's will be priviledged with admin rights
+     *
+     * @return Factory
+     */
+    public function as_admin(): Factory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'is_admin' => true,
+            ];
+        });
+    }
+
+    /**
+     * Indicate that the model's active state will be true (default is false)
+     *
+     * @return Factory
+     */
+    public function as_active(): Factory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'is_active' => true,
+            ];
+        });
+    }
+
+    /**
      * Indicate that the model's email address should be unverified.
      *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     * @return Factory
      */
     public function unverified()
     {

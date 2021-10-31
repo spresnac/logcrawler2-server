@@ -11,6 +11,15 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property int $current_team_id
+ * @property string $profile_photo_path
+ * @property bool $is_admin
+ * @property bool $is_active
+ */
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -26,7 +35,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'is_active',
     ];
 
     /**
@@ -48,6 +57,8 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'is_admin' => 'boolean',
     ];
 
     /**
