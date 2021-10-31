@@ -18,11 +18,18 @@
                 </thead>
                 <tfoot>
                     <tr>
-                        <td colspan="4" class="m-2 p-2 font-extralight">{{ __('project.count') }}: 0</td>
+                        <td colspan="4" class="m-2 p-2 font-extralight">{{ __('project.count') }}: {{ $projects->count() }}</td>
                     </tr>
                 </tfoot>
                 <tbody>
-
+                    @foreach ($projects as $project)
+                        <tr>
+                            <td>{{ $project->id }}</td>
+                            <td>{{ $project->name }}</td>
+                            <td> --- </td>
+                            <td>...</td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
