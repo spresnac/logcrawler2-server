@@ -12,9 +12,13 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: [...defaultTheme.fontFamily.sans],
             },
         },
+    },
+
+    variants: {
+        opacity: ['responsive', 'hover', 'focus', 'disabled'],
     },
 
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],

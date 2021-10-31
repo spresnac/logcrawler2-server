@@ -7,9 +7,24 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
-            </div>
+            <table class="shadow-lg rounded w-full">
+                <thead>
+                    <tr>
+                        <th class="m-2 p-2 font-bold">ID</th>
+                        <th class="m-2 p-2 font-bold">{{ __('project.name') }}</th>
+                        <th class="m-2 p-2 font-bold">{{ __('project.entries.count') }}</th>
+                        <th class="m-2 p-2 font-bold">{{ __('project.actions') }}</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="m-2 p-2 font-extralight">{{ __('project.count') }}: 0</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
     </div>
 </x-app-layout>
