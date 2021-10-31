@@ -8,26 +8,28 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <table class="shadow-lg rounded w-full">
-                <thead>
+                <thead class="text-left bg-white">
                     <tr>
                         <th class="m-2 p-2 font-bold">ID</th>
+                        <th class="m-2 p-2 font-bold">{{ __('project.owner') }}</th>
                         <th class="m-2 p-2 font-bold">{{ __('project.name') }}</th>
                         <th class="m-2 p-2 font-bold">{{ __('project.entries.count') }}</th>
                         <th class="m-2 p-2 font-bold">{{ __('project.actions') }}</th>
                     </tr>
                 </thead>
-                <tfoot>
+                <tfoot class="text-right">
                     <tr>
-                        <td colspan="4" class="m-2 p-2 font-extralight">{{ __('project.count') }}: {{ $projects->count() }}</td>
+                        <td colspan="5" class="m-2 p-2 font-extralight">{{ __('project.count') }}: {{ $projects->count() }}</td>
                     </tr>
                 </tfoot>
                 <tbody>
                     @foreach ($projects as $project)
-                        <tr>
-                            <td>{{ $project->id }}</td>
-                            <td>{{ $project->name }}</td>
-                            <td> --- </td>
-                            <td>...</td>
+                        <tr class="bg-transparent hover:bg-white">
+                            <td class="m-2 p-2">{{ $project->id }}</td>
+                            <td class="m-2 p-2">{{ $project->user_id }}</td>
+                            <td class="m-2 p-2">{{ $project->name }}</td>
+                            <td class="m-2 p-2"> --- </td>
+                            <td class="m-2 p-2">...</td>
                         </tr>
                     @endforeach
                 </tbody>

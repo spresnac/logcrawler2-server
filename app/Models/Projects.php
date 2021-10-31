@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Builder;
+use Laravel\Jetstream\Jetstream;
 
 /**
  * @property int $id
@@ -32,6 +33,10 @@ class Projects extends Model
     {
         parent::boot();
         static::addGlobalScope('own_projects_only', function (Builder $builder) {
+            if (Jetstream::hasTeamFeatures()) {
+                $builder->whereIn('user_id', auth()->user()->currentTeam->allUsers()->pluck('id', 'id'));
+                return;
+            }
             $builder->where('user_id', '=', auth()->id());
         });
     }
