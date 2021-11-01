@@ -7,16 +7,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Laravel\Jetstream\Jetstream;
 
 /**
- * @property int $id
+ * @property-read int $id
  * @property int $user_id
  * @property string $name
  * @property string $key
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read  Carbon $created_at
+ * @property-read  Carbon $updated_at
  * @property Carbon $archived_at
+ * @property-read int $logs_count
  * @method Builder active
  * @method Builder archived
  */
@@ -27,6 +30,12 @@ class Projects extends Model
     protected $table = 'projects';
     protected $fillable = [
         'user_id', 'name', 'key', 'archived_at'
+    ];
+    protected $appends = [
+        'last_entry_date',
+    ];
+    protected $withCount = [
+        'logs',
     ];
 
     protected static function boot()
@@ -53,7 +62,17 @@ class Projects extends Model
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'id', 'user_id');
+        return $this->belongsTo(User::class);
+    }
+
+    public function logs(): HasMany
+    {
+        return $this->hasMany(Logs::class, 'project_id', 'id')->orderBy('id', 'DESC');
+    }
+
+    public function getLastEntryDateAttribute()
+    {
+        return $this->logs()->max('logged_at');
     }
 
 }

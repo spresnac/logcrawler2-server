@@ -4,7 +4,7 @@ return [
     'owner' => 'Project Owner',
     'search' => 'Search',
     'entries' => [
-        'count' => 'Count',
+        'count' => '# Logs',
     ],
     'actions' => 'Actions',
     'count' => 'Project count',

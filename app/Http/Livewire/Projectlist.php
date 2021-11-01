@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Projects;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -20,9 +21,10 @@ class Projectlist extends Component
     public function render()
     {
         $pagenate_number = 12;
+        $projects = Projects::with(['user:id,name']);
         $projects = ($this->search === '')
-            ? Projects::paginate($pagenate_number)
-            : Projects::where(function (Builder $query) {
+            ? $projects->paginate($pagenate_number)
+            : $projects->where(function (Builder $query) {
                 $query->where('name', 'LIKE', '%'.$this->search.'%');
             })->paginate($pagenate_number);
 

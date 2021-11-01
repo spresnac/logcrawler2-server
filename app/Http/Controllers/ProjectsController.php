@@ -9,10 +9,7 @@ class ProjectsController extends Controller
 {
     public function index()
     {
-        $projects = Projects::get();
-        return view('dashboard', [
-            'projects' => $projects
-        ]);
+        return view('dashboard');
     }
 
     public function create()
