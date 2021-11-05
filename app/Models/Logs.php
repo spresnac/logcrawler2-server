@@ -17,7 +17,7 @@ use Illuminate\Support\Carbon;
  * @property string $channel
  * @property Carbon $logged_at
  * @property string $message
- * @property string formatted
+ * @property string $formatted
  * @property int $size
  * @property-read Carbon $created_at
  * @property-read Carbon $updated_at

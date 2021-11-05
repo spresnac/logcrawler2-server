@@ -2,6 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
+            <a href="{{ route('projects.create') }}"><x-jet-secondary-button>{{ __('project.new') }}</x-jet-secondary-button></a>
         </h2>
     </x-slot>
 

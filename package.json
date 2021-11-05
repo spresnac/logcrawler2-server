@@ -13,7 +13,7 @@
         "@fortawesome/fontawesome-free": "^5.15.4",
         "@tailwindcss/forms": "^0.3.4",
         "@tailwindcss/typography": "^0.4.1",
-        "alpinejs": "^3.4.2",
+        "alpinejs": "^3.5.0",
         "axios": "^0.24",
         "laravel-mix": "^6.0.37",
         "lodash": "^4.17.21",

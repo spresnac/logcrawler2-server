@@ -14,5 +14,7 @@ Route::get('/not_active', function () {
 Route::middleware(['auth:sanctum', 'verified', 'is_active'])->group(function() {
 
     Route::get(RouteServiceProvider::HOME, [ProjectsController::class, 'index'])->name('dashboard');
+    Route::get('/projects/create', [ProjectsController::class, 'create'])->name('projects.create');
+    Route::post('/projects/create', [ProjectsController::class, 'store'])->name('projects.store');
 
 });

@@ -14,12 +14,14 @@ class ProjectsController extends Controller
 
     public function create()
     {
-        //
+        return view('projects.create', [
+            'project' => new Projects(['key' => null]),
+        ]);
     }
 
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     public function show(Projects $projects)
