@@ -1,8 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight flex">
             {{ __('Dashboard') }}
-            <a href="{{ route('projects.create') }}"><x-jet-secondary-button>{{ __('project.new') }}</x-jet-secondary-button></a>
+            <div class="w-full text-right">
+                <a class="" href="{{ route('projects.create') }}"><x-jet-button>{{ __('project.new') }}</x-jet-button></a>
+            </div>
         </h2>
     </x-slot>
 

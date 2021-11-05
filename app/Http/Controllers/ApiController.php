@@ -13,8 +13,7 @@ class ApiController extends Controller
     {
         /** @var Projects $project */
         $project = Projects::where('key', '=', $request->headers->get(config('logcrawler_server.header_key')))
-            ->withoutGlobalScopes()
-            ->whereNull('archived_at')
+            ->active()
             ->first();
         if ($project !== null) {
             foreach ($request->all() as $row) {
