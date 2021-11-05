@@ -19,24 +19,9 @@ class ProjectsController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function edit(Projects $project)
     {
-        dd($request->all());
-    }
-
-    public function show(Projects $projects)
-    {
-        //
-    }
-
-    public function edit(Projects $projects)
-    {
-        //
-    }
-
-    public function update(Request $request, Projects $projects)
-    {
-        //
+        return view('projects.edit', ['project' => $project]);
     }
 
     public function destroy(Projects $projects)

@@ -17,7 +17,11 @@
                 <td nowrap class="border px-4 py-2 overflow-hidden">{{ $project->user->name }} ({{ $project->user_id }})</td>
                 <td nowrap class="border px-4 py-2 overflow-hidden">{{ $project->name }}</td>
                 <td nowrap class="border px-4 py-2 overflow-hidden text-right">{{ $project->logs_count }}</td>
-                <td nowrap class="border px-4 py-2 overflow-hidden text-right">...</td>
+                <td nowrap class="border px-4 py-2 overflow-hidden text-right">
+                    <a href="{{ route('projects.edit', ['project' => $project->id]) }}" title="{{ __('project.edit') }}">
+                        <i class="fas fa-tools"></i>
+                    </a>
+                </td>
             </tr>
         @endforeach
         </tbody>
