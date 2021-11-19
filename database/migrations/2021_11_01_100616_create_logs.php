@@ -18,7 +18,7 @@ class CreateLogs extends Migration
             $table->string('channel')->default('');
             $table->dateTime('logged_at')->default(Carbon::now());
             $table->mediumText('message');
-            $table->mediumText('formatted');
+            $table->binary('formatted');
             $table->unsignedBigInteger('size')->default(0);
             $table->timestamps();
             $table->foreign('project_id')->on('projects')->references('id');

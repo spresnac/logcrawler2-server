@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use DateTime;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -31,6 +32,14 @@ class Logs extends Model
     protected $fillable = [
         'project_id', 'ident', 'level', 'level_name', 'channel', 'logged_at', 'message', 'formatted', 'size',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope('default_sort', function (Builder $builder) {
+            $builder->orderByDesc('created_at');
+        });
+    }
 
     public function project(): BelongsTo
     {

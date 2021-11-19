@@ -15,7 +15,7 @@
     //...
     'stack' => [
         'driver' => 'stack',
-        'channels' => ['daily', <b class="bg-yellow-300">'logcrawler'</b>],
+        'channels' => ['daily', <b class="bg-yellow-600">'logcrawler'</b>],
         'ignore_exceptions' => false,
     ],
     //...

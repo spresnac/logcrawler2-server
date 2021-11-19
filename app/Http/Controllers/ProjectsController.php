@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Projects;
-use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
@@ -24,8 +23,8 @@ class ProjectsController extends Controller
         return view('projects.edit', ['project' => $project]);
     }
 
-    public function destroy(Projects $projects)
+    public function show(Projects $project)
     {
-        //
+        return view('projects.show', ['project' => $project]);
     }
 }

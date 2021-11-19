@@ -22,7 +22,8 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
         "nunomaduro/larastan": "^1.0",
-        "phpunit/phpunit": "^9.5.8"
+        "phpunit/phpunit": "^9.5.8",
+        "spresnac/laravel-artisan-database-helper": "^1"
     },
     "autoload": {
         "psr-4": {

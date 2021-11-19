@@ -15,7 +15,11 @@
             <tr class="bg-transparent hover:bg-gray-200">
                 <td nowrap class="border px-4 py-2 overflow-hidden">{{ $project->id }}</td>
                 <td nowrap class="border px-4 py-2 overflow-hidden">{{ $project->user->name }} ({{ $project->user_id }})</td>
-                <td nowrap class="border px-4 py-2 overflow-hidden">{{ $project->name }}</td>
+                <td nowrap class="border px-4 py-2 overflow-hidden">
+                    <a href="{{ route('projects.show', ['project' => $project]) }}" class="">
+                        {{ $project->name }}
+                    </a>
+                </td>
                 <td nowrap class="border px-4 py-2 overflow-hidden text-right">{{ $project->logs_count }}</td>
                 <td nowrap class="border px-4 py-2 overflow-hidden text-right">
                     <a href="{{ route('projects.edit', ['project' => $project->id]) }}" title="{{ __('project.edit') }}">
