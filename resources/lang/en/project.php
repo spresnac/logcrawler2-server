@@ -18,6 +18,7 @@ return [
     'edit_description' => 'You cannot change the project key!',
     'edit_button' => 'Edit this project',
     'key' => 'Projectkey',
+    'last_log_date' => 'Last log date',
 
     'configuration' => [
         'headline' => 'How to get your logs into this project 💡',

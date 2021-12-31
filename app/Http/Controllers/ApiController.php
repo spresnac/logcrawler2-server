@@ -12,6 +12,7 @@ class ApiController extends Controller
 {
     public function log(Request $request)
     {
+        dump($request->all());
         /** @var Projects $project */
         $project = Projects::where('key', '=', $request->headers->get(config('logcrawler_server.header_key')))
             ->active()

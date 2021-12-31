@@ -11,17 +11,13 @@
         <div class="col-span-6 sm:col-span-4">
             {!! __('project.configuration.2.text_1') !!}<br />
 
-<pre class="bg-gray-800 text-gray-200 p-2 select-all text-xs">
+<pre class="bg-gray-800 text-gray-200 p-2 text-xs">
     'channels' => [
         //...
         'logcrawler' => [
             'driver' => 'monolog',
             'level' => 'debug',
             'handler' => LogCrawler::class,  // import this!
-            'handler_with' => [
-                'host' => config('logcrawler.url'),
-                'key' => config('logcrawler.key'),
-            ],
         ],
         //...
     ],

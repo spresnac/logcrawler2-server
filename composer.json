@@ -1,8 +1,8 @@
 {
     "name": "spresnac/logcrawler-server-new",
     "type": "project",
-    "description": "",
-    "keywords": ["laravel"],
+    "description": "A laravel software to combine all your laravel project's logs into one place",
+    "keywords": ["laravel", "logging", "on premise", "log", "collect"],
     "license": "MIT",
     "require": {
         "php": "^8.0",
@@ -12,18 +12,21 @@
         "laravel/jetstream": "^2.4",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.5"
+        "livewire/livewire": "^2.5",
+        "spresnac/laravel-create-user-cli": "^1.0",
+        "spresnac/logcrawler-client": "dev-develop",
+        "spresnac/laravel-artisan-database-helper": "^1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
+        "beyondcode/laravel-dump-server": "^1.7",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
         "nunomaduro/larastan": "^1.0",
-        "phpunit/phpunit": "^9.5.8",
-        "spresnac/laravel-artisan-database-helper": "^1"
+        "phpunit/phpunit": "^9.5.8"
     },
     "autoload": {
         "psr-4": {
@@ -63,5 +66,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../logcrawler-client"
+        }
+    ]
 }

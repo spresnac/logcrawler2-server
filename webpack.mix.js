@@ -6,7 +6,4 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ]);
 mix.postCss('node_modules/@fortawesome/fontawesome-free/css/all.css', 'public/css/fa-all.css');
-
-if (mix.inProduction()) {
-    mix.version();
-}
+mix.version();

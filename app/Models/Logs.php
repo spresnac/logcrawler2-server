@@ -37,7 +37,7 @@ class Logs extends Model
     {
         parent::boot();
         static::addGlobalScope('default_sort', function (Builder $builder) {
-            $builder->orderByDesc('created_at');
+            $builder->orderByDesc('id');
         });
     }
 

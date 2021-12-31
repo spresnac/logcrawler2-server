@@ -7,8 +7,8 @@ module.exports = {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './app/Repositories/**/*.php',
     ],
-
     theme: {
         extend: {
             fontFamily: {
@@ -16,10 +16,8 @@ module.exports = {
             },
         },
     },
-
     variants: {
         opacity: ['responsive', 'hover', 'focus', 'disabled'],
     },
-
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };

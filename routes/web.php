@@ -1,15 +1,15 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProjectsController;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/not_active', function () {
     return view('not_active');
 })->name('not_active');
+
+Route::get('/', [PageController::class, 'index'])->name('page.index');
 
 Route::middleware(['auth:sanctum', 'verified', 'is_active'])->group(function() {
 

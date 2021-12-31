@@ -3,6 +3,7 @@
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
+use spresnac\logcrawlerclient\Handler\LogCrawler;
 
 return [
 
@@ -35,9 +36,15 @@ return [
     */
 
     'channels' => [
+        'logcrawler' => [
+            'driver' => 'monolog',
+            'level' => 'debug',
+            'handler' => LogCrawler::class,
+        ],
+
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['single', 'logcrawler'],
             'ignore_exceptions' => false,
         ],
 

@@ -7,7 +7,6 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
-use Laravel\Fortify\Features;
 
 class RouteServiceProvider extends ServiceProvider
 {

@@ -20,6 +20,7 @@ use Laravel\Jetstream\Jetstream;
  * @property-read  Carbon $updated_at
  * @property Carbon $archived_at
  * @property-read int $logs_count
+ * @property-read Carbon lastEntryDate
  * @method Builder active()
  * @method Builder archived()
  */
@@ -71,7 +72,7 @@ class Projects extends Model
 
     public function logs(): HasMany
     {
-        return $this->hasMany(Logs::class, 'project_id', 'id')->orderBy('id', 'DESC');
+        return $this->hasMany(Logs::class, 'project_id', 'id');
     }
 
     public function getLastEntryDateAttribute()

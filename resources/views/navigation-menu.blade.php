@@ -43,9 +43,11 @@
                                     </div>
 
                                     <!-- Team Settings -->
-                                    <x-jet-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam?->id) }}">
-                                        {{ __('Team Settings') }}
-                                    </x-jet-dropdown-link>
+                                    @if(Auth::user()->currentTeam !== null)
+                                        <x-jet-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam?->id) }}">
+                                            {{ __('Team Settings') }}
+                                        </x-jet-dropdown-link>
+                                    @endif
 
                                     @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
                                         <x-jet-dropdown-link href="{{ route('teams.create') }}">
@@ -190,9 +192,11 @@
                     </div>
 
                     <!-- Team Settings -->
+                    @if(Auth::user()->currentTeam !== null)
                     <x-jet-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam?->id) }}" :active="request()->routeIs('teams.show')">
                         {{ __('Team Settings') }}
                     </x-jet-responsive-nav-link>
+                    @endif
 
                     @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
                         <x-jet-responsive-nav-link href="{{ route('teams.create') }}" :active="request()->routeIs('teams.create')">

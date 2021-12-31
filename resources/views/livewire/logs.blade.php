@@ -1,4 +1,4 @@
-<div class="mb-16 ">
+<div class="mb-16" wire:poll>
     <div class="overflow-hidden">
         <input wire:model="search" type="text" placeholder="{{ __('Search the logs') }}" class="mb-6 shadow appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
     </div>
@@ -7,7 +7,7 @@
         @foreach($logs as $index => $log)
             <tr class="bg-transparent hover:bg-gray-200">
                 <td class="flex align-top border-t text-sm px-2 py-1 {{ \App\Repositories\ProjectRepository::getColorStringForLogLevel($log->level) }} ">
-                    <button class="align-top" @click="open = {{ $index }}">
+                    <button class="align- max-h-6" @click="open = (open == {{ $index }} ? -1 : {{ $index }})">
                         <i class="far fa-plus-square align-top"  x-show="open != {{ $index }}"></i>
                         <i class="far fa-minus-square align-top" x-show="open == {{ $index }}"></i>
                     </button>

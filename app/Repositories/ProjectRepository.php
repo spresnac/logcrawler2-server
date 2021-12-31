@@ -24,7 +24,7 @@ class ProjectRepository
     public static function formatLogLine(Logs $log): string
     {
         return sprintf(
-            '[%1$s] %2$s.%3$s: %4$s %5$s',
+            '[%1$s] %2$s.%3$s: %4$s',
             $log->logged_at,
             $log->channel,
             $log->level_name,
@@ -32,14 +32,14 @@ class ProjectRepository
         );
     }
 
+    // TODO: let user customize the colors, next version
     public static function getColorStringForLogLevel(int $log_level): string
     {
         return match ($log_level) {
-            100 => 'text-green-500', // debug
-            200 => 'text-gray-600', // info
-            300 => 'text-yellow-400', // warning
-            400 => 'text-red-500', // error
-            default => 'text-gray-600',
+            100 => 'text-gray-400', // debug
+            300 => 'text-orange-500', // warning
+            400, 500, 550 => 'text-red-500', // error, critical
+            default => 'text-gray-600', // info goes here, default
         };
     }
 }
