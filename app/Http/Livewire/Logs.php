@@ -22,7 +22,7 @@ class Logs extends Component
 
     public function render()
     {
-        $pagenate_number = 99;
+        $pagenate_number = 100;
         $logs = $this->project->logs();
         if ($this->search !== '') {
             $logs = $logs->where(function (Builder $query) {
