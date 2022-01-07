@@ -13,6 +13,7 @@ class Logs extends Component
 
     public Projects $project;
     public string $search = '';
+    public int $level = 0;
 
     public function updatingSearch()
     {
@@ -23,14 +24,16 @@ class Logs extends Component
     {
         $pagenate_number = 99;
         $logs = $this->project->logs();
-        $logs = ($this->search === '')
-            ? $logs->paginate($pagenate_number)
-            : $logs->where(function (Builder $query) {
-                $query->where('message', 'LIKE', '%'.$this->search.'%');
-            })->paginate($pagenate_number);
-
+        if ($this->search !== '') {
+            $logs = $logs->where(function (Builder $query) {
+                $query->where('message', 'LIKE', '%' . $this->search . '%');
+            });
+        }
+        if ($this->level > 0) {
+            $logs = $logs->where('level', '=', $this->level);
+        }
         return view('livewire.logs', [
-            'logs' => $logs,
+            'logs' => $logs->paginate($pagenate_number),
         ]);
     }
 }
