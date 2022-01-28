@@ -6,27 +6,27 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.54",
-        "laravel/jetstream": "^2.4",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.5",
-        "spresnac/laravel-create-user-cli": "^1.0",
+        "fruitcake/laravel-cors": "2.0.5",
+        "guzzlehttp/guzzle": "7.4.1",
+        "laravel/framework": "8.81.0",
+        "laravel/jetstream": "2.6.3",
+        "laravel/sanctum": "2.14.0",
+        "laravel/tinker": "2.7.0",
+        "livewire/livewire": "2.10.1",
+        "spresnac/laravel-create-user-cli": "1.0.5",
         "spresnac/logcrawler-client": "dev-develop",
-        "spresnac/laravel-artisan-database-helper": "^1"
+        "spresnac/laravel-artisan-database-helper": "1.0.9"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.6",
-        "beyondcode/laravel-dump-server": "^1.7",
-        "facade/ignition": "^2.5",
-        "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
-        "nunomaduro/larastan": "^1.0",
-        "phpunit/phpunit": "^9.5.8"
+        "barryvdh/laravel-debugbar": "3.6.5",
+        "beyondcode/laravel-dump-server": "1.7.0",
+        "facade/ignition": "2.17.4",
+        "fakerphp/faker": "1.18.0",
+        "laravel/sail": "1.13.1",
+        "mockery/mockery": "1.5.0",
+        "nunomaduro/collision": "5.11.0",
+        "nunomaduro/larastan": "1.0.3",
+        "phpunit/phpunit": "9.5.13"
     },
     "autoload": {
         "psr-4": {
