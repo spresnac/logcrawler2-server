@@ -132,7 +132,7 @@ return [
     */
 
     'features' => [
-//        Features::registration(),
+        env('LOGCRAWLER_SERVER_ENABLE_REGISTRATION', false) ? Features::registration() : '',
         Features::resetPasswords(),
         // Features::emailVerification(),
         Features::updateProfileInformation(),
