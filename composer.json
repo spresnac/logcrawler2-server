@@ -18,7 +18,7 @@
         "spresnac/laravel-artisan-database-helper": "^1"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.6",
+        "barryvdh/laravel-debugbar": "3.6.6",
         "beyondcode/laravel-dump-server": "^1.7",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
