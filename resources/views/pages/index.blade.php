@@ -20,7 +20,7 @@
                     </p>
                     <div class="flex justify-center mb-12 md:mb-0">
                         <a class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-4 px-6 rounded shadow-lg"
-                           href="https://github.com/spresnac/logcrawler-server">Clone and start <i class="fab fa-git-alt"></i></a>
+                           href="https://github.com/spresnac/logcrawler2-server">Clone and start <i class="fab fa-git-alt"></i></a>
                     </div>
                 </div>
             </div>
