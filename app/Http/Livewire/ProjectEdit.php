@@ -3,7 +3,6 @@
 namespace App\Http\Livewire;
 
 use App\Models\Projects;
-use App\Repositories\ProjectRepository;
 use Livewire\Component;
 
 class ProjectEdit extends Component

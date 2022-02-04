@@ -13,7 +13,15 @@ In the standard configuration, logcrawler server comes with it's own `logcrawler
 Also, you have a tool to backup and restore your database and one to create your first user from your cli.
 
 ## Create the first admin user
-First of all, you need to add yourself to the system. For there is no "standard" registration, you have to use the cli for this: Run `php artisan user:create` and follow the steps to createyourself as you like.
+First of all, you need to add yourself to the system.
+
+You are free to enable the default registration by setting the `.env` key
+```dotenv
+LOGCRAWLER_SERVER_ENABLE_REGISTRATION=true
+```
+The registration is disabled by default!
+
+Alternativly, you can also use the cli for this: Run `php artisan user:create` and follow the steps to createyourself as you like.
 
 After that, remember the user id and run `php artisan user:activate <user_id>` to activate that user!
 
@@ -22,7 +30,12 @@ One more step is needed: In your database's `users` table, change the `is_admin`
 ## Configure your first project
 Now, open your browser and goto your installation and add an `/login` to get to the login. Enter your credentials and login.
 
-You are now in the dashboard. On top right, you see a button to create a `New Project`. After clicking on this, you can enter a name for the new project. Try it with `My logcrawler server` and click on `Create a new project`.  
+Keep in mind that the login route is avail, but not visible by default. To enable a link from the Homepage, just edit your `.env` and set
+```dotenv
+LOGCRAWLER_SERVER_ENABLE_VISIBLE_LOGIN=true
+```
+
+In the dashboard on top right, you see a button to create a `New Project`. After clicking on this, you can enter a name for the new project. Try it with `My logcrawler server` and click on `Create a new project`.  
 ![Creating a new project](docs/creating_a_new_project.png)
 
 You will be redirected to the dashboard with the new project created. Every time you create a project, you will get a flash message on top of the dashboard to inform you about the creation of the new project with it's key. This is important for you once you are familiar with the procedure and you only need to know the key.  
