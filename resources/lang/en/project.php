@@ -31,17 +31,17 @@ return [
         '2' => [
             'title' => 'Step 2',
             'description' => 'Setup your config',
-            'text_1' => 'Edit your <code class="bg-gray-800 text-gray-200 select-all">config/logging.php</code> and add this at your <code class="bg-gray-800 text-gray-200 select-all">channels</code>',
+            'text_1' => 'Edit your <code class="code_file">config/logging.php</code> and add this at your <code class="code_file">channels</code>',
         ],
         '3' => [
             'title' => 'Step 3',
             'description' => 'Adding the channel',
-            'text_1' => 'Add the new channel to your logging configuration in <code class="bg-gray-800 text-gray-200 select-all">config/logging.php</code>',
+            'text_1' => 'Add the new channel to your logging configuration in <code class="code_file">config/logging.php</code>',
         ],
         '4' => [
             'title' => 'Step 4',
             'description' => 'Adding your keys',
-            'text_1' => 'Add your key to your <code class="bg-gray-800 text-gray-200 select-all">.env</code>',
+            'text_1' => 'Add your key to your <code class="code_file">.env</code>',
             'hint' => 'This is already your key in the code above',
         ],
         '5' => [

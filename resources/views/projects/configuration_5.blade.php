@@ -8,11 +8,11 @@
     </x-slot>
 
     <x-slot name="form">
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6">
             {!! __('project.configuration.5.text_1') !!}<br />
-<pre class="bg-gray-800 text-gray-200 p-2 select-all text-sm">
-php artisan vendor:publish --tag=logcrawlerclient-config
-</pre>
+<pre class="tl_pre_container"><x-torchlight-code language='shell' class="m-4 select-all">
+    php artisan vendor:publish --tag=logcrawlerclient-config
+</x-torchlight-code></pre>
         </div>
     </x-slot>
 </x-jet-form-section>

@@ -8,9 +8,11 @@
     </x-slot>
 
     <x-slot name="form">
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6">
             {{ __('project.configuration.1.text_1') }}<br />
-            {!! __('project.configuration.1.text_2') !!}
+            <pre class="mt-2 bg-slate-700 px-4 rounded-lg"><x-torchlight-code language='shell' class="m-4">
+                composer require spresnac/logcrawler-client
+            </x-torchlight-code></pre>
         </div>
     </x-slot>
 </x-jet-form-section>

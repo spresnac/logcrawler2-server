@@ -1,3 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.code_file {
+    @apply bg-slate-700 text-gray-200 select-all p-1 rounded
+}
+.tl_pre_container {
+    @apply mt-2 bg-slate-700 px-4 rounded-lg
+}
