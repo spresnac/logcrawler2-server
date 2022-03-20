@@ -9,7 +9,7 @@
             <th class="px-4 py-2 font-normal">{{ __('project.name') }}</th>
             <th class="px-4 py-2 w-60 font-normal text-center ">{{ __('project.last_log_date') }}</th>
             <th class="px-4 py-2 text-right w-36 font-normal">{{ __('project.entries.count') }}</th>
-            <th class="px-4 py-2 text-center w-32 font-normal">{{ __('project.info') }}</th>
+            <th class="px-4 py-2 text-center w-36 font-normal">{{ __('project.info') }}</th>
             <th class="px-4 py-2 text-right w-20 font-normal">{{ __('project.actions') }}</th>
         </thead>
         <tbody>
