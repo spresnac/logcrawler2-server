@@ -32,7 +32,7 @@ class Projects extends Model
 
     protected $table = 'projects';
     protected $fillable = [
-        'user_id', 'name', 'key', 'archived_at'
+        'user_id', 'name', 'key', 'version_php', 'version_laravel', 'archived_at'
     ];
     protected $appends = [
         'last_entry_date',
