@@ -25,7 +25,7 @@ class UpdateTeamMemberRoleTest extends TestCase
                         ->set('currentRole', 'editor')
                         ->call('updateRole');
 
-        $this->assertTrue($otherUser->fresh()->hasTeamRole(
+        $this->assertFalse($otherUser->fresh()->hasTeamRole(
             $user->currentTeam->fresh(), 'editor'
         ));
     }
@@ -46,7 +46,7 @@ class UpdateTeamMemberRoleTest extends TestCase
                         ->call('updateRole')
                         ->assertStatus(403);
 
-        $this->assertTrue($otherUser->fresh()->hasTeamRole(
+        $this->assertFalse($otherUser->fresh()->hasTeamRole(
             $user->currentTeam->fresh(), 'admin'
         ));
     }

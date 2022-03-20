@@ -8,20 +8,20 @@
     </x-slot>
 
     <x-slot name="form">
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6">
             {!! __('project.configuration.2.text_1') !!}<br />
 
-<pre class="bg-gray-800 text-gray-200 p-2 text-xs">
+<pre class="tl_pre_container"><x-torchlight-code language='php' class="m-4">
     'channels' => [
         //...
-        'logcrawler' => [
-            'driver' => 'monolog',
-            'level' => 'debug',
-            'handler' => LogCrawler::class,  // import this!
-        ],
+        'logcrawler' => [ // [tl! ++]
+            'driver' => 'monolog', // [tl! ++]
+            'level' => 'debug', // [tl! ++]
+            'handler' => LogCrawler::class, // [tl! ++]
+        ], // [tl! add]
         //...
     ],
-</pre>
+</x-torchlight-code></pre>
         </div>
     </x-slot>
 </x-jet-form-section>

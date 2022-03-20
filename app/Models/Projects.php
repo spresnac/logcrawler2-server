@@ -16,6 +16,8 @@ use Laravel\Jetstream\Jetstream;
  * @property int $user_id
  * @property string $name
  * @property string $key
+ * @property string $version_php
+ * @property string $version_laravel
  * @property-read  Carbon $created_at
  * @property-read  Carbon $updated_at
  * @property Carbon $archived_at
@@ -30,7 +32,7 @@ class Projects extends Model
 
     protected $table = 'projects';
     protected $fillable = [
-        'user_id', 'name', 'key', 'archived_at'
+        'user_id', 'name', 'key', 'version_php', 'version_laravel', 'archived_at'
     ];
     protected $appends = [
         'last_entry_date',

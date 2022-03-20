@@ -8,18 +8,19 @@
     </x-slot>
 
     <x-slot name="form">
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6">
             {!! __('project.configuration.3.text_1') !!}<br />
 
-<pre class="bg-gray-800 text-gray-200 p-2 select-all text-xs">
+<pre class="tl_pre_container"><x-torchlight-code language='php' class="m-4">
     //...
     'stack' => [
         'driver' => 'stack',
-        'channels' => ['daily', <b class="bg-yellow-600">'logcrawler'</b>],
+        'channels' => ['daily'], // [tl! --]
+        'channels' => ['daily', 'logcrawler'], // [tl! ++]
         'ignore_exceptions' => false,
     ],
     //...
-</pre>
+</x-torchlight-code></pre>
         </div>
     </x-slot>
 </x-jet-form-section>
