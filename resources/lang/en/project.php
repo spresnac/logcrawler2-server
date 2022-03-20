@@ -6,6 +6,7 @@ return [
     'entries' => [
         'count' => '# Logs',
     ],
+    'info' => 'Info',
     'actions' => 'Actions',
     'count' => 'Project count',
     'create' => 'Create Project',

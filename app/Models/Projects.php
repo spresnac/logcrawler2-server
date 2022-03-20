@@ -16,6 +16,8 @@ use Laravel\Jetstream\Jetstream;
  * @property int $user_id
  * @property string $name
  * @property string $key
+ * @property string $version_php
+ * @property string $version_laravel
  * @property-read  Carbon $created_at
  * @property-read  Carbon $updated_at
  * @property Carbon $archived_at
