@@ -71,6 +71,6 @@ class ApiController extends Controller
 
     protected function check_version_string_is_valid(string $input): bool
     {
-        return version_compare('0.0.1', $input, '>=');
+        return version_compare('0.0.1', $input, '<=');
     }
 }
