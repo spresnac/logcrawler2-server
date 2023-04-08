@@ -14,7 +14,7 @@ class Projectlist extends Component
     use WithPagination;
 
     public string $search = '';
-    public string $order_by = 'id';
+    public string $order_by = 'projects.id';
 
     public function updatingSearch()
     {
