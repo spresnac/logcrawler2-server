@@ -14,6 +14,7 @@ class Projectlist extends Component
     use WithPagination;
 
     public string $search = '';
+    public string $order_by = 'projects.id';
 
     public function updatingSearch()
     {
@@ -23,7 +24,9 @@ class Projectlist extends Component
     public function render(): View
     {
         $pagenate_number = 12;
-        $projects = Projects::with(['user:id,name']);
+        $projects = Projects::query()
+            ->with(['user:id,name', 'logs'])
+            ->orderBy($this->order_by);
         $projects = ($this->search === '')
             ? $projects->paginate($pagenate_number)
             : $projects->where(function (Builder $query) {
@@ -33,5 +36,10 @@ class Projectlist extends Component
         return view('livewire.projectlist', [
             'projects' => $projects,
         ]);
+    }
+
+    public function order_by($order_field)
+    {
+        $this->order_by = $order_field;
     }
 }

@@ -5,7 +5,7 @@
     "keywords": ["laravel", "logging", "on premise", "log", "collect"],
     "license": "MIT",
     "require": {
-        "php": "^8.0",
+        "php": "^8.0|^8.1",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^9",
@@ -15,7 +15,7 @@
         "livewire/livewire": "^2.5",
         "spresnac/laravel-artisan-database-helper": "^1",
         "spresnac/laravel-create-user-cli": "^1.0",
-        "spresnac/logcrawler-client": "^2.0.0-beta.1",
+        "spresnac/logcrawler-client": "^2",
         "torchlight/torchlight-laravel": "^0.5.11"
     },
     "require-dev": {

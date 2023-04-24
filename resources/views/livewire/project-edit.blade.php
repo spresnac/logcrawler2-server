@@ -15,7 +15,7 @@
         </div>
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="projectkey" value="{{ __('project.key') }}" />
-            <x-jet-input readonly id="projectkey" type="text" class="mt-1 block w-full select-all" wire:model="key" />
+            <x-jet-input readonly id="projectkey" type="text" class="mt-1 block w-full " wire:model="key" />
             <x-jet-input-error for="projectkey" class="mt-2" />
         </div>
     </x-slot>
@@ -26,4 +26,3 @@
     </x-slot>
 </x-jet-form-section>
 <x-jet-section-border />
-

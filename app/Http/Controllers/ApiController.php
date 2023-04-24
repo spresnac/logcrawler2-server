@@ -23,7 +23,7 @@ class ApiController extends Controller
         }
         foreach ($request->all() as $row) {
             $params = $row['params'];
-            $record = $row['record'];
+            $record = collect($row['record']);
             /** @var Carbon $carbon */
             $carbon = (is_string($record['datetime'])===true)
                 ? Carbon::createFromFormat('Y-m-d\TH:i:s.uP', $record['datetime'])
@@ -31,12 +31,12 @@ class ApiController extends Controller
             Logs::create([
                 'project_id' => $project->id,
                 'ident' => $params['ident'],
-                'level' => $record['level'],
-                'level_name' => $record['level_name'],
-                'channel' => $record['channel'],
+                'level' => $record->get('level', 0),
+                'level_name' => $record->get('level_name', ''),
+                'channel' => $record->get('channel', ''),
                 'logged_at' => $carbon->toDateTimeString(),
-                'message' => $record['message'],
-                'formatted' => $record['formatted'],
+                'message' => $record->get('message'),
+                'formatted' => $record->get('formatted'),
                 'size' => mb_strlen(serialize($row)),
             ]);
         }

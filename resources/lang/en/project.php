@@ -43,7 +43,7 @@ return [
             'title' => 'Step 4',
             'description' => 'Adding your keys',
             'text_1' => 'Add your key to your <code class="code_file">.env</code>',
-            'hint' => 'This is already your key in the code above',
+            'hint' => 'This is already your key in your url in the code above',
         ],
         '5' => [
             'title' => 'Step 5',
