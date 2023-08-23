@@ -30,6 +30,7 @@ class Projectlist extends Component
     {
         $pagenate_number = 12;
         $projects = Projects::query()
+            ->distinct()
             ->addSelect('logs.created_at')
             ->leftJoin(
                 'logs',
