@@ -17,8 +17,10 @@ return [
     'edited' => 'The project was updated',
     'edit' => 'Edit this project',
     'edit_description' => 'You cannot change the project key!',
+    'edit_description2' => 'Archiving your project let it disappear from all list and stops it from receiving messages!',
     'edit_button' => 'Edit this project',
     'key' => 'Projectkey',
+    'archived' => 'Archived',
     'last_log_date' => 'Last log date',
 
     'configuration' => [
