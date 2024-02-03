@@ -55,6 +55,9 @@ class Projects extends Model
             }
             $builder->where('user_id', '=', auth()->id());
         });
+        static::addGlobalScope('show_non_archived', function (Builder $builder) {
+            $builder->whereNull('archived_at');
+        });
     }
 
     public function scopeActive(Builder $query): Builder
