@@ -12,7 +12,7 @@
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^6.5.2",
         "@tailwindcss/forms": "^0.5.7",
-        "@tailwindcss/typography": "^0.5.12",
+        "@tailwindcss/typography": "^0.5.13",
         "alpinejs": "^3.13.8",
         "axios": "^1.6.8",
         "laravel-mix": "^6.0.49",
