@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Laravel\Jetstream\Jetstream;
 
 /**
@@ -33,9 +32,6 @@ class Projects extends Model
     protected $table = 'projects';
     protected $fillable = [
         'user_id', 'name', 'key', 'version_php', 'version_laravel', 'archived_at'
-    ];
-    protected $appends = [
-        'last_entry_date',
     ];
     protected $withCount = [
         'logs',
@@ -84,5 +80,4 @@ class Projects extends Model
     {
         return $this->logs()->max('logged_at');
     }
-
 }
