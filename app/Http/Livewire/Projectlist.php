@@ -26,6 +26,7 @@ class Projectlist extends Component
         $pagenate_number = 12;
         $projects = Projects::query()
             ->with(['user:id,name', 'logs'])
+            ->withCount('logs')
             ->orderBy($this->order_by);
         $projects = ($this->search === '')
             ? $projects->paginate($pagenate_number)

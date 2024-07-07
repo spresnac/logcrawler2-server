@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Carbon;
 
 /**
@@ -41,8 +42,8 @@ class Logs extends Model
         });
     }
 
-    public function project(): BelongsTo
+    public function project(): HasOne
     {
-        return $this->belongsTo(Projects::class, 'id', 'project_id');
+        return $this->hasOne(Projects::class, 'id', 'project_id');
     }
 }
