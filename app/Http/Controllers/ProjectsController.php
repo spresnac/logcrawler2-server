@@ -27,4 +27,9 @@ class ProjectsController extends Controller
     {
         return view('projects.show', ['project' => $project]);
     }
+
+    public function showAllLogs()
+    {
+        return view('projects.alllogs');
+    }
 }
