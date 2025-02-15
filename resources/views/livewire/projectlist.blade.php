@@ -1,6 +1,6 @@
 <div class="mb-16" wire:poll.10s>
     <div class="overflow-hidden">
-        <input wire:model="search" type="text" placeholder="{{ __('project.search') }}" class="mb-6 shadow appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+        <input wire:model="search" type="text" placeholder="{{ __('project.search') }}" class="mb-6 shadow-sm appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-sm py-3 px-4 leading-tight focus:outline-hidden focus:bg-white focus:border-gray-500" />
     </div>
     <table class="table-fixed w-full mb-16 mt-6 px-4 py-3 shadow-md border-slate-200 text-gray-600 responsive rounded-lg">
         <thead class="text-left bg-slate-200 text-slate-400">

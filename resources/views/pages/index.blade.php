@@ -19,7 +19,7 @@
                         Head over to the repo at github and get your own logcrawler server 💪
                     </p>
                     <div class="flex justify-center mb-12 md:mb-0">
-                        <a class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-4 px-6 rounded shadow-lg"
+                        <a class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-4 px-6 rounded-sm shadow-lg"
                            href="https://github.com/spresnac/logcrawler2-server">Clone and start <i class="fab fa-git-alt"></i></a>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         If coding is not your thing, you can donate something to me. There are several ways to do this, the most common could be to participate in sponsoring me on github.
                     </p>
                     <div class="flex justify-center mb-12 md:mb-0">
-                        <a class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-4 px-6 rounded shadow-lg"
+                        <a class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-4 px-6 rounded-sm shadow-lg"
                            href="https://github.com/sponsors/spresnac"><i class="fab fa-github"></i> Sponsor me on github</a>
                     </div>
                 </div>

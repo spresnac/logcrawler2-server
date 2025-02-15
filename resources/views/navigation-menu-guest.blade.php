@@ -2,7 +2,7 @@
     <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
             <div class="flex">
-                <div class="flex-shrink-0 flex items-center">
+                <div class="shrink-0 flex items-center">
                     <a href="{{ route('page.index') }}">
                         <img src="{{ asset('storage/logo.png') }}" class="w-30 max-w-60 h-20 max-h-48" />
                     </a>

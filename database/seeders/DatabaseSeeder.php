@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'Sascha Presnac',
             'email' => 'sascha@presnac.de',
-            'password' => password_hash('123456789', PASSWORD_DEFAULT),
+            'password' => password_hash('1234567890', PASSWORD_DEFAULT),
             'is_admin' => true,
             'is_active' => true,
         ]);
